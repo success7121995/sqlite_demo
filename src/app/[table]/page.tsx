@@ -4,7 +4,7 @@ const DropdownFormComponent = () => {
   return (<>
   <div className="w-full flex flex-col justify-center items-center max-w-[800px]">
       <AccordionForm fields={fields} />
-      <Table fields={fields} />
+      <Table />
   </div>
   </>);
 };
@@ -12,7 +12,7 @@ const DropdownFormComponent = () => {
 export default DropdownFormComponent;
 
 // An array of objects that is used for building the INSERT form dynamically.
-export const fields = [
+const fields = [
   {
     // Object containing a single key `stores` with more details defined.
     stores: {
