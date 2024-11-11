@@ -10,7 +10,7 @@ interface DataContextProps {
   handleFetching: () => void,
   fetchRowsData: (table: string) => Promise<TableState[]>,
   fetchRowsDataWithParams: <T extends Attribute>(table: string[], params?: T) => Promise<TableState[]>,
-  addData: <T extends Attribute>(table: string, data: T) => {} | string,
+  addData: <T extends Attribute>(table: string, data: T) => object | string,
   addReferenceData: <T extends Attribute>(table: string,id: string, referenceId: string, data?: T) => void,
   deleteData: (table: string, id: string) => void,
   updateData: <T extends Attribute>(table: string, id: string, data: T) => void

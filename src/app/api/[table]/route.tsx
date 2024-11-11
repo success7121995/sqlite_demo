@@ -2,7 +2,6 @@ import { getRowsData, getRowsDataWithReferences } from '@/lib/db';
 
 export const GET = async (req: Request) => {
   const { pathname, search } = new URL(req.url);
-  let result: any[] = []
   const params = Object.fromEntries(new URLSearchParams(search));
 
   // Split the URL path by '/' and get the last part as the table name.
